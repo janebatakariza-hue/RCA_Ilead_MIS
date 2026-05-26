@@ -45,9 +45,7 @@ export default function Login() {
             alt="iLEAD Logo"
             className="w-20 h-20 mx-auto mb-3 object-contain"
           />
-          <h1 className="text-4xl font-blacktext-text-white mb-2">
-            iLEAD Login
-          </h1>
+          <h1 className="text-4xl font-black text-white mb-2">iLEAD Login</h1>
           <p className="text-white font-medium">
             Access your management portal
           </p>
@@ -84,10 +82,9 @@ export default function Login() {
                 <input
                   type="email"
                   required
-                  className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-chocolate focus:border-transparent transition-all shadow-inner"
+                  className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-white focus:border-white/50 transition-all shadow-inner"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="coordinator@gmail.com"
                 />
               </div>
               <div>
@@ -97,7 +94,7 @@ export default function Login() {
                 <input
                   type="password"
                   required
-                  className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-chocolate focus:border-transparent transition-all shadow-inner"
+                  className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-white focus:border-white/50 transition-all shadow-inner"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
@@ -113,7 +110,7 @@ export default function Login() {
                 <input
                   type="email"
                   required
-                  className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-chocolate focus:border-transparent transition-all shadow-inner"
+                  className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-white focus:border-white/50 transition-all shadow-inner"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="facilitator@example.com"
@@ -126,7 +123,7 @@ export default function Login() {
                 <input
                   type="password"
                   required
-                  className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-chocolate focus:border-transparent transition-all shadow-inner"
+                  className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-white focus:border-white/50 transition-all shadow-inner"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
