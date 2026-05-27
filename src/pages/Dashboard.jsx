@@ -70,11 +70,12 @@ export default function Dashboard() {
 
   return (
     <div className="p-8 w-full">
+      
       <div className="mb-10">
-        <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-chocolate-dark to-chocolate inline-block drop-shadow-sm">
+        <h1 className="text-4xl font-black text-white">
           Overview
         </h1>
-        <p className="text-chocolate font-medium mt-2">Track the performance and status of students across the program.</p>
+        <p className="text-white/80 font-medium mt-2">Track the performance and status of students across the program.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -91,7 +92,7 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="glass-panel p-6">
-          <h2 className="text-xl font-bold text-chocolate-dark mb-6">Student Distribution by Year</h2>
+          <h2 className="text-xl font-bold text-white mb-6">Student Distribution by Year</h2>
           <div className="h-[300px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={areaData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
@@ -125,7 +126,7 @@ export default function Dashboard() {
         </div>
 
         <div className="glass-panel p-6">
-          <h2 className="text-xl font-bold text-chocolate-dark mb-6">Program Status Analysis</h2>
+          <h2 className="text-xl font-bold text-white mb-6">Program Status Analysis</h2>
           <div className="h-[300px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarData}>

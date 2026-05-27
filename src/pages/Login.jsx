@@ -32,7 +32,7 @@ export default function Login() {
       setError(err.response?.data?.message || "Login failed");
     }
   };
-  const images = ["/bg.jpg", "/bg2.jpg", "/bg3.jpg"];
+  const images = ["/bg.jpg", "/bg2.jpg", "/bg3.jpg","/bg4.jpg","/bg5.jpg","/bg6.jpg"];
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
