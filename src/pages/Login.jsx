@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
 
@@ -32,13 +32,25 @@ export default function Login() {
       setError(err.response?.data?.message || "Login failed");
     }
   };
+  const images = ["/bg.jpg", "/bg2.jpg", "/bg3.jpg"];
+  const [currentImage, setCurrentImage] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div
-      className="min-h-screen flex items-center justify-center p-4 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/bg.jpg')" }}
+      className="min-h-screen flex items-center justify-center p-4 bg-cover bg-top bg-no-repeat overflow-hidden"
+      style={{
+        backgroundImage: `url('${images[currentImage]}')`,
+        transition: "background-image 1s ease-in-out",
+      }}
     >
-      <div className="glass-panel max-w-md w-full p-8">
+      <div className="absolute inset-0 backdrop-blur-[2px] bg-black/20 z-0" />
+      <div className="glass-panel max-w-md w-full p-8 relative z-10">
         <div className="text-center mb-8">
           <img
             src="/logo.png"
@@ -53,13 +65,13 @@ export default function Login() {
 
         <div className="flex gap-2 mb-8 bg-white/10 p-1 rounded-xl">
           <button
-            className={`flex-1 py-2 rounded-lg font-bold transition-all ${activeTab === "coordinator" ? "bg-white text-black shadow" : "text-white/70 hover:text-white"}`}
+            className={`flex-1 py-2 rounded-lg font-bold transition-all cursor-pointer ${activeTab === "coordinator" ? "bg-white text-black shadow" : "text-white/70 hover:text-white"}`}
             onClick={() => setActiveTab("coordinator")}
           >
             Coordinator
           </button>
           <button
-            className={`flex-1 py-2 rounded-lg font-bold transition-all ${activeTab === "facilitator" ? "bg-white text-black shadow" : "text-white/70 hover:text-white"}`}
+            className={`flex-1 py-2 rounded-lg font-bold transition-all cursor-pointer ${activeTab === "facilitator" ? "bg-white text-black shadow" : "text-white/70 hover:text-white"}`}
             onClick={() => setActiveTab("facilitator")}
           >
             Facilitator
@@ -85,6 +97,7 @@ export default function Login() {
                   className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-white focus:border-white/50 transition-all shadow-inner"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  placeholder="cordinator@gmail.com"
                 />
               </div>
               <div>
@@ -94,7 +107,7 @@ export default function Login() {
                 <input
                   type="password"
                   required
-                  className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-white focus:border-white/50 transition-all shadow-inner"
+                  className="w-full bg-white/60 border border-white/30 placeholder-text-gray-500 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-white focus:border-white/50 transition-all shadow-inner"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
