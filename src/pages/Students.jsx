@@ -211,10 +211,8 @@ export default function Students() {
     <div className="p-8 w-full">
       <div className="mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
         <div>
-          <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-chocolate-dark to-chocolate inline-block drop-shadow-sm">
-            Students Directory
-          </h1>
-          <p className="text-chocolate font-medium mt-2">
+          <h1 className="text-4xl font-black text-black">Students Directory</h1>
+          <p className="text-black/60 font-medium mt-2">
             View and manage student categories and status.
           </p>
         </div>
@@ -249,7 +247,7 @@ export default function Students() {
             className="pl-10"
             type="text"
             placeholder="Search by name, email, phone, roundtable, or facilitator..."
-            className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-chocolate font-semibold text-chocolate-dark shadow-inner transition-all"
+            className="w-full bg-white/60 border border-chocolate/30 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-black/30 font-semibold text-chocolate-dark shadow-inner transition-all"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -384,7 +382,7 @@ export default function Students() {
                 </label>
                 <input
                   required
-                  className="w-full bg-chocolate-light/30 border border-chocolate/30 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-chocolate"
+                  className="w-full bg-chocolate-light/30 border border-black/20 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-chocolate"
                   value={form.fullName}
                   onChange={(e) =>
                     setForm({ ...form, fullName: e.target.value })
