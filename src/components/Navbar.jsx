@@ -28,8 +28,13 @@ export default function Navbar() {
   return (
     <div className="bg-white/10 backdrop-blur-md bg-chocolate sticky top-0 z-50 text-white p-4 shadow-lg border-b border-chocolate/30">
       <div className="w-full px-8 flex justify-between items-center">
-        <div className="flex gap-8 items-center">
-          <div className="text-2xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white">
+        <div className="flex gap-8 items-center" gap-2>
+          <img
+            src="/logo.png"
+            alt="iLEAD Logo"
+            className="w-10 h-10 object-contain"
+          />
+          <div className="text-2xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-black to-black/80">
             iLEAD
           </div>
           <div className="flex gap-2">
@@ -39,8 +44,8 @@ export default function Navbar() {
                 to={link.path}
                 className={`px-4 py-2 rounded-xl transition-all duration-300 font-medium ${
                   isActive(link.path)
-                    ? "bg-white text-black shadow-md"
-                    : "hover:bg-white/20 hover:text-white"
+                    ? "bg-[#1A1A1A] text-white shadow-md"
+                    : "text-[#555555] hover:bg-[#F2F2F2] hover:text-[#1A1A1A]"
                 }`}
               >
                 {link.label}
@@ -54,7 +59,7 @@ export default function Navbar() {
           </span>
           <button
             onClick={handleLogout}
-            className="text-sm font-bold text-white hover:text-chocolate-light hover:bg-white/10 px-4 py-2 rounded-xl transition-colors"
+            className="text-sm font-bold text-white bg-black hover:text-chocolate-light hover:bg-black/10 px-4 py-2 rounded-xl transition-colors"
           >
             Logout
           </button>

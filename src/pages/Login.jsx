@@ -32,7 +32,14 @@ export default function Login() {
       setError(err.response?.data?.message || "Login failed");
     }
   };
-  const images = ["/bg.jpg", "/bg2.jpg", "/bg3.jpg","/bg4.jpg","/bg5.jpg","/bg6.jpg"];
+  const images = [
+    "/bg.jpg",
+    "/bg2.jpg",
+    "/bg3.jpg",
+    "/bg4.jpg",
+    "/bg5.jpg",
+    "/bg6.jpg",
+  ];
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -57,21 +64,21 @@ export default function Login() {
             alt="iLEAD Logo"
             className="w-20 h-20 mx-auto mb-3 object-contain"
           />
-          <h1 className="text-4xl font-black text-white mb-2">iLEAD Login</h1>
-          <p className="text-white font-medium">
+          <h1 className="text-4xl font-black text-black mb-2">iLEAD Login</h1>
+          <p className="text-black font-medium">
             Access your management portal
           </p>
         </div>
 
         <div className="flex gap-2 mb-8 bg-white/10 p-1 rounded-xl">
           <button
-            className={`flex-1 py-2 rounded-lg font-bold transition-all cursor-pointer ${activeTab === "coordinator" ? "bg-white text-black shadow" : "text-white/70 hover:text-white"}`}
+            className={`flex-1 py-2 rounded-lg font-bold transition-all cursor-pointer ${activeTab === "coordinator" ? "bg-white text-black shadow" : "text-black/60 hover:text-black hover:bg-black/10 border border-black/20 bg-gray-50"}`}
             onClick={() => setActiveTab("coordinator")}
           >
             Coordinator
           </button>
           <button
-            className={`flex-1 py-2 rounded-lg font-bold transition-all cursor-pointer ${activeTab === "facilitator" ? "bg-white text-black shadow" : "text-white/70 hover:text-white"}`}
+            className={`flex-1 py-2 rounded-lg font-bold transition-all cursor-pointer ${activeTab === "facilitator" ? "bg-white text-black shadow" : "text-black/60 hover:text-black hover:bg-black/10 border border-black/20 bg-gray-50"}`}
             onClick={() => setActiveTab("facilitator")}
           >
             Facilitator
@@ -147,7 +154,7 @@ export default function Login() {
 
           <button
             type="submit"
-            className="btn-primary w-full py-3 text-lg mt-4"
+            className="btn-primary w-full py-3 text-lg mt-4 cursor-pointer"
           >
             Sign In
           </button>

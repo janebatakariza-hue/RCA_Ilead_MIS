@@ -10,39 +10,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Jost", system-ui, sans-serif;
-  background: url("/bg.jpg") center/cover no-repeat fixed;
-  background-attachment: fixed;
+  background: #f2f2f2;
   min-height: 100vh;
-  color: var(--color-chocolate-dark);
+  color: #1a1a1a;
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(210, 105, 30, 0.2);
-  box-shadow: 0 8px 32px rgba(92, 51, 23, 0.08);
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   border-radius: 20px;
   transition: all 0.3s ease;
 }
 
 .glass-panel:hover {
-  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-color: #d0d0d0;
 }
 
 .btn-primary {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #1a1a1a;
+  border: none;
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 12px;
   font-weight: 600;
   transition: all 0.3s ease;
-  /* box-shadow: 0 4px 15px rgba(210, 105, 30, 0.3); */
 }
 
 .btn-primary:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.6);
+  background: #333333;
 }
