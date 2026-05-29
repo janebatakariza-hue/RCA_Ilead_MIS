@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { Eye, Edit, Trash2, Send } from "lucide-react";
+import { Eye, Edit, Trash2, Send, ArrowLeft } from "lucide-react";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 import API from "../services/api";
@@ -610,10 +610,18 @@ export default function Roundtables() {
           <div className="glass-panel p-8 max-w-4xl w-full bg-white relative my-8">
             <button
               onClick={() => setIsDetailsModalOpen(false)}
-              className="absolute top-4 right-4 text-chocolate font-bold hover:text-chocolate-dark text-xl"
+              className="absolute top-4 right-4 text-chocolate font-bold hover:text-chocolate-dark text-xl cursor-pointer"
             >
               ✕
             </button>
+            <div className="sticky top-0 bg-white z-10 pb-3 mb-3">
+              <button
+                onClick={() => setIsDetailsModalOpen(false)}
+                className="flex items-center gap-2 text-chocolate-dark hover:text-black font-semibold cursor-pointer transition-colors"
+              >
+                <ArrowLeft size={18} /> Go Back
+              </button>
+            </div>
 
             <div className="mb-6 border-b border-chocolate/20 pb-6">
               <div className="flex justify-between items-start">
