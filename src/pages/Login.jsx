@@ -32,14 +32,7 @@ export default function Login() {
       setError(err.response?.data?.message || "Login failed");
     }
   };
-  const images = [
-    "/bg.jpg",
-    "/bg2.jpg",
-    "/bg3.jpg",
-    "/bg4.jpg",
-    "/bg5.jpg",
-    "/bg6.jpg",
-  ];
+  const images = ["/bg2.jpg", "/bg4.webp", "/bg5.jpg", "/bg6.jpg", "/bg7.jpg"];
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -56,7 +49,7 @@ export default function Login() {
         transition: "background-image 1s ease-in-out",
       }}
     >
-      <div className="absolute inset-0 backdrop-blur-[2px] bg-black/20 z-0" />
+      <div className="absolute inset-0 backdrop-blur-none bg-black/20 z-0" />
       <div className="glass-panel max-w-md w-full p-8 relative z-10">
         <div className="text-center mb-8">
           <img
@@ -114,7 +107,7 @@ export default function Login() {
                 <input
                   type="password"
                   required
-                  className="w-full bg-white/60 border border-white/30 placeholder-text-gray-500 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-white focus:border-white/50 transition-all shadow-inner"
+                  className="w-full bg-white/60 border border-chocolate/30 p-3 placeholder-text-gray-500 p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-white focus:border-white/50 transition-all shadow-inner"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
