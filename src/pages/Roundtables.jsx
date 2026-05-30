@@ -732,8 +732,8 @@ export default function Roundtables() {
 
       {/* Bulk Invite Modal */}
       {isBulkModalOpen && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-start justify-center z-50 p-4 overflow-y-auto">
-          <div className="glass-panel p-8 max-w-4xl w-full bg-white relative mt-20 mb-8">
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-start justify-center z-50 p-8">
+          <div className="glass-panel p-8 max-w-4xl w-full bg-white relative mt-16 overflow-y-auto max-h-[85vh]">
             <button
               onClick={() => setIsBulkModalOpen(false)}
               className="absolute top-4 right-4 text-chocolate font-bold hover:text-chocolate-dark text-xl"
