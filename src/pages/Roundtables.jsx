@@ -614,7 +614,7 @@ export default function Roundtables() {
             >
               ✕
             </button>
-            <div className="sticky top-0 bg-white z-10 pb-3 mb-3">
+            <div className="sticky top-0 bg-white z-10 py-3 mb-3 border-b border-black/10">
               <button
                 onClick={() => setIsDetailsModalOpen(false)}
                 className="flex items-center gap-2 text-chocolate-dark hover:text-black font-semibold cursor-pointer transition-colors"
@@ -623,6 +623,14 @@ export default function Roundtables() {
               </button>
             </div>
 
+            <div className="sticky top-0 bg-white z-10 py-3 mb-4 border-b border-black/10">
+              <button
+                onClick={() => setIsDetailsModalOpen(false)}
+                className="flex items-center gap-2 text-chocolate-dark hover:text-black font-semibold cursor-pointer transition-colors"
+              >
+                <ArrowLeft size={18} /> Go Back
+              </button>
+            </div>
             <div className="mb-6 border-b border-chocolate/20 pb-6">
               <div className="flex justify-between items-start">
                 <div>
@@ -724,8 +732,8 @@ export default function Roundtables() {
 
       {/* Bulk Invite Modal */}
       {isBulkModalOpen && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4 overflow-y-auto">
-          <div className="glass-panel p-8 max-w-3xl w-full bg-white relative my-8">
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-start justify-center z-50 p-4 overflow-y-auto">
+          <div className="glass-panel p-8 max-w-4xl w-full bg-white relative mt-20 mb-8">
             <button
               onClick={() => setIsBulkModalOpen(false)}
               className="absolute top-4 right-4 text-chocolate font-bold hover:text-chocolate-dark text-xl"
