@@ -54,12 +54,12 @@ export default function Navbar() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-sm font-semibold uppercase tracking-wider text-white bg-white/20 px-3 py-1 rounded-lg">
+          <span className="text-sm font-semibold uppercase tracking-wider text-white bg-chocolate-dark px-4 py-1.5 rounded-xl">
             {role}
           </span>
           <button
             onClick={handleLogout}
-            className="text-sm font-bold text-white bg-black hover:text-chocolate-light hover:bg-black/10 px-4 py-2 rounded-xl transition-colors"
+            className="text-sm font-bold text-white bg-chocolate-dark hover:text-chocolate-dark hover:bg-white/10 px-4 py-2 rounded-xl transition-colors"
           >
             Logout
           </button>
